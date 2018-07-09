@@ -1,6 +1,7 @@
 #include "bgmodel.h"
 
 BGModel::BGModel(const float bg_gc) : gc_genome(bg_gc), model(4) {
+	train_background();
 }
 
 double BGModel::score_site(const Seqset& seqset, const Motif& motif, const int c, const int p, const bool s) const {
