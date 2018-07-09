@@ -8,20 +8,15 @@ double BGModel::score_site(const Seqset& seqset, const Motif& motif, const int c
 	const vector<vector <int> >& ss_seq = seqset.seq();
 	double L = 0.0;
 	int width = motif.get_width();
-	int matpos;
 	vector<int>::const_iterator col_iter = motif.first_column();
 	vector<int>::const_iterator last_col = motif.last_column();
 	if(s) {
-		matpos = 0;
 		for(; col_iter != last_col; ++col_iter) {
 			L += log2(model[ss_seq[c][p + *col_iter]]);
-			matpos += 4;
 		}
 	} else {
-		matpos = 0;
 		for(; col_iter != last_col; ++col_iter) {
 			L += log2(model[ss_seq[c][p + width - 1 - *col_iter]]);
-			matpos += 4;
 		}
 	}
 	return L;
