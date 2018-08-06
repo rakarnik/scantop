@@ -24,6 +24,7 @@ scantop: \
 		bin/bgmodel.o\
 		bin/motif.o\
 		bin/scantop.o\
+		bin/scoredsite.o\
 		bin/seqset.o\
 		bin/site.o\
 		bin/standard.o
@@ -31,6 +32,7 @@ scantop: \
 		bin/bgmodel.o\
 		bin/motif.o\
 		bin/scantop.o\
+		bin/scoredsite.o\
 		bin/seqset.o\
 		bin/site.o\
 		bin/standard.o\
